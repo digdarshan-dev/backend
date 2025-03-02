@@ -1,0 +1,31 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "workspaces": [
+    "packages/*",
+    "shared"
+  ],
+  "_moduleAliases": {
+    "@shared": "./shared"
+  },
+  "private": true,
+  "scripts": {
+    "start": "lerna run start --parallel"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "module-alias": "^2.2.3",
+    "nodemon": "^3.1.9",
+    "pg": "^8.13.3",
+    "pg-hstore": "^2.3.4"
+  },
+  "devDependencies": {
+    "lerna": "^7.4.2"
+  }
+}
