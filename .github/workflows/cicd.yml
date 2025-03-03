@@ -79,6 +79,8 @@ jobs:
             echo "Running new container..."
             docker run -d --name backend -p 5001:5001 -p 5002:5002 \
               -e NODE_ENV=production \
+              -e SUPABASE_URL=${{ secrets.SUPABASE_URL }} \
+              -e SUPABASE_ANON_KEY=${{ secrets.SUPABASE_ANON_KEY }} \
               ${{ secrets.DOCKER_USERNAME }}/backend:latest || { echo "Docker run failed"; exit 1; }
 
             echo "Deployment completed successfully!"
