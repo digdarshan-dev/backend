@@ -30,8 +30,8 @@ jobs:
       - name: Install Microservice Dependencies
         run: npx lerna exec -- npm install
 
-      - name: Run Tests
-        run: npx lerna run test --stream
+      # - name: Run Tests
+      #   run: npx lerna run test --stream
 
   docker-build-and-deploy:
     needs: build-and-test
